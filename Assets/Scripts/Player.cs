@@ -12,7 +12,7 @@ public class Player : Character
 		aceleration = 0.1f;
 		deceleration = 0.2f;
 	}
-    // Update is called once per frame
+
     protected override void Update()
     {
 		getInput();
@@ -30,8 +30,5 @@ public class Player : Character
 		direction.y = Input.GetAxisRaw("Vertical");
 		isSprinting = Input.GetKey(KeyCode.LeftShift);
 	}
-
-
-
 }
 

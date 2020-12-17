@@ -43,9 +43,8 @@ public abstract class Character : MonoBehaviour
 		checkSprint();
 	}
 	
-	private void move(){//movePosition){
+	protected void move(){//movePosition){
 		rb.MovePosition(rb.position + direction.normalized * moveSpeed  * Time.fixedDeltaTime);
-		//rb.MovePosition(rb.position + movePosition * moveSpeed  * Time.fixedDeltaTime);
 	}
 
 	public void checkStop(float x, float y){
@@ -66,7 +65,7 @@ public abstract class Character : MonoBehaviour
 		}
 	}
 
-	public void stop(){
+	public void stop(){ //lowers speed to make the animator show the walking animation
 		moveSpeed = walkSpeed;
 	}
 	
